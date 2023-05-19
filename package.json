@@ -1,8 +1,10 @@
 {
-  "name": "uni-vite",
+  "name": "caring-request",
   "version": "0.0.1",
   "scripts": {
     "build": "rollup -c",
+    "prepub": "npm run build",
+    "pub": "sh release.sh",
     "serve": "npm run dev:h5",
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
@@ -67,6 +69,10 @@
   "author": "风度万人迷",
   "license": "ISC",
   "main": "src/dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fascinating-W/caring-request"
+  },
   "files": [
     "src/dist"
   ]

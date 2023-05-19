@@ -1,9 +1,8 @@
-# 使用cli创建的 Vue3/Vite 版本的 uni-app 项目模版
-
-## 支持sass
-https://vitejs.cn/guide/features.html#css-modules
-
-pnpm install sass -D
-
-## 运行
-h5: npm run serve
+<!--
+ * @Author: Wanko
+ * @Date: 2023-05-17 14:42:53
+ * @LastEditors: Wanko
+ * @LastEditTime: 2023-05-19 11:03:51
+ * @Description: 
+-->
+# caring-request
