@@ -3,7 +3,7 @@
  # @Author: Wanko
  # @Date: 2023-02-16 18:41:13
  # @LastEditors: Wanko
- # @LastEditTime: 2023-05-19 10:58:22
+ # @LastEditTime: 2023-05-19 11:09:21
  # @Description: 
 ### 
 set -e
@@ -19,7 +19,7 @@ then
   echo "🕙 Releasing $VERSION ..."
   git ci "[release] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
-  git push origin master
+  git push origin main
   npm publish
 fi
 echo "🎉 $VERSION version publish success"
