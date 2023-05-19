@@ -21,7 +21,6 @@ specifiers:
   '@rollup/plugin-node-resolve': ^15.0.2
   '@rollup/plugin-terser': ^0.4.3
   autoprefixer: ^10.4.2
-  caring-request: ^0.0.5
   sass: ^1.49.9
   vite: ^2.8.6
   vue: ^3.2.31
@@ -41,7 +40,6 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': 3.0.0-alpha-3031320220314002_vue@3.2.31
   '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3031320220314002_vue@3.2.31
   '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3031320220314002_vue@3.2.31
-  caring-request: 0.0.5_sass@1.49.9+vite@2.8.6
   vue: 3.2.31
   vue-i18n: 9.1.9_vue@3.2.31
   vuex: 4.0.2_vue@3.2.31
@@ -2492,41 +2490,6 @@ packages:
 
   /caniuse-lite/1.0.30001320:
     resolution: {integrity: sha512-MWPzG54AGdo3nWx7zHZTefseM5Y1ccM7hlQKHRqJkPozUaw3hNbBTMmLn16GG2FUzjR13Cr3NPfhIieX5PzXDA==}
-
-  /caring-request/0.0.5_sass@1.49.9+vite@2.8.6:
-    resolution: {integrity: sha512-wqli6lNmPIItKiKXyWtYEj6RXZthB7LtZgs18LsiaEtxs/xEKo6VUJdTsNeoL5lJNPOJYqAqv0Z1/dmKjUmaJQ==}
-    dependencies:
-      '@dcloudio/uni-app': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-app-plus': 3.0.0-alpha-3031320220314002_096b0258ec7e85ce8f19f16216232c9e
-      '@dcloudio/uni-components': 3.0.0-alpha-3031320220314002
-      '@dcloudio/uni-h5': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-mp-alipay': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-mp-baidu': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-mp-kuaishou': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-mp-lark': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-mp-qq': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-mp-toutiao': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3031320220314002_vue@3.2.31
-      vue: 3.2.31
-      vue-i18n: 9.1.9_vue@3.2.31
-      vuex: 4.0.2_vue@3.2.31
-    transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - fibers
-      - less
-      - node-sass
-      - postcss
-      - sass
-      - sass-embedded
-      - stylus
-      - supports-color
-      - ts-node
-      - uglify-js
-      - vite
-      - webpack-cli
-    dev: false
 
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
