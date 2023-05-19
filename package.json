@@ -1,6 +1,6 @@
 {
   "name": "caring-request",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "build": "rollup -c",
     "prepub": "npm run build",
