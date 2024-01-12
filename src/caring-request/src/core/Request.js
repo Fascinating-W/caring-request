@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-05-17 14:55:12
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-19 10:16:27
+ * @LastEditTime: 2024-01-12 23:32:55
  * @Description:
  */
 import { isPlainObject } from '../helpers/util'
@@ -25,7 +25,6 @@ export default class Request {
       // 空url退出
       if (!url.trim()) return
       ;[data = {}, config = {}] = args
-
       Object.assign(config, {
         url,
         data
@@ -36,12 +35,6 @@ export default class Request {
     } else {
       return
     }
-    // 合并配置
-
-    config = mergeConfig(this.defaults, config)
-    console.log(config)
-    // processConfig(config)
-
     // 配置拦截器
     const chain = [
       {
@@ -56,12 +49,15 @@ export default class Request {
     this.interceptors.response.forEach((interceptor) => {
       chain.push(interceptor)
     })
+
+    // 合并配置
+    config = mergeConfig(this.defaults, config)
     let promise = Promise.resolve(config)
+
     while (chain.length) {
       const { resolved, rejected } = chain.shift()
       promise = promise.then(resolved, rejected)
     }
-
     return promise
   }
   get(...args) {
@@ -79,28 +75,27 @@ export default class Request {
   _handleParams(method, ...args) {
     // 空参数退出
     if (!args.length) return
-    const [url] = args
-    // 不是 url 退出
-    if (typeof url !== 'string') return
-    // 空url退出
-    if (!url.trim()) return
+    let [url, data = {}, config = {}] = args
+    config.url = url
+    config.data = data
+    config.method = method
 
-    let data, config
-    if (method === 'delete') {
-      ;[, config = {}] = args
-      Object.assign(config, {
-        method,
-        url
-      })
-    } else {
-      // 带data的请求
-      ;[, data = {}, config = {}] = args
-      Object.assign(config, {
-        method,
-        data,
-        url
-      })
-    }
+    // let data, config
+    // if (method === 'delete') {
+    //   ;[, config = {}] = args
+    //   Object.assign(config, {
+    //     method,
+    //     url
+    //   })
+    // } else {
+    //   // 带data的请求
+    //   ;[, data = {}, config = {}] = args
+    //   Object.assign(config, {
+    //     method,
+    //     data,
+    //     url
+    //   })
+    // }
     return this.request(config)
   }
 }

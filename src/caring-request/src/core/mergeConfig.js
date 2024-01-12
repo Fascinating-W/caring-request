@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-05-17 17:38:24
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-19 10:16:35
+ * @LastEditTime: 2024-01-12 23:32:42
  * @Description:
  */
 import { deepMerge, isPlainObject } from '../helpers/util'
@@ -70,6 +70,5 @@ export default function mergeConfig(config1, config2) {
     const strat = strats[key] || defaultStrat
     config[key] = strat(config1[key], config2[key])
   }
-
   return config
 }

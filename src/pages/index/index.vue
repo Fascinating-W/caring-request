@@ -2,14 +2,17 @@
  * @Author: Wanko
  * @Date: 2023-05-17 14:42:53
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-19 10:16:54
+ * @LastEditTime: 2024-01-12 23:37:08
  * @Description: 
 -->
 <template>
-  <div></div>
+  <div>
+    <button @click="getDept">get dept</button>
+  </div>
 </template>
 
 <script>
+import request from '../../caring-request'
 export default {
   async mounted() {
     // request.delete('http://jsonplaceholder.typicode.com/todos/1', {
@@ -56,8 +59,7 @@ export default {
     //     xxxx: '2222'
     //   }
     // })
-    const d = await this.$request.get('TODO_1', {}, {raw: true})
-    console.log(d)
+    // const d = await this.$request.get('TODO_1', {}, {raw: true})
     // request({
     //   url: ,
     //   data: { name: 'wanko' },
@@ -86,7 +88,24 @@ export default {
     // ).catch((err) => {
     //   console.log(err)
     // })
-  }
+  },
+  methods: {
+    async getDept() {
+      console.log('getDept')
+      // const res = await request.get('https://huaiyi.chinacaring.com:28081/api/test/public/dept')
+      const res = await this.$request.get('DEPT', '', {raw: true})
+      // await this.$request.get(`DEPT`,'', {
+      //   raw: true
+      // })
+      // await this.$request('DEPT', 'abc/123423423423')
+
+      // await this.$request({
+      //   url: 'DEPT',
+      // })
+      console.log(res)
+      
+    }
+  },
 }
 </script>
 

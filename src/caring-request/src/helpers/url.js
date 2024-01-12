@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-05-17 18:07:49
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-17 20:54:05
+ * @LastEditTime: 2024-01-12 23:29:22
  * @Description:
  */
 /**
@@ -15,7 +15,6 @@ export function isAbsoluteURL(url) {
 }
 
 export function combineURL(baseURL, relativeURL) {
-  console.log(baseURL, relativeURL)
   // 删掉baseURL末尾的/ 和要拼接的relativeURL的开头url,防止用户的书写不规范
   return relativeURL
     ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
@@ -29,6 +28,6 @@ export function transformURL(config) {
   } else if (isAbsoluteURL(url)) {
     return config.url
   } else {
-    throw new Error('无效的url,未配置baseURL')
+    throw new Error('无效的url,未配置baseURL', url, baseURL)
   }
 }

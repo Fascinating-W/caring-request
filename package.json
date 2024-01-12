@@ -47,6 +47,7 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.3",
     "autoprefixer": "^10.4.2",
+    "caring-request": "^0.0.8",
     "sass": "^1.49.9",
     "vite": "^2.8.6"
   },
