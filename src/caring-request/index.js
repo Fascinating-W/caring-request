@@ -2,13 +2,13 @@
  * @Author: Wanko
  * @Date: 2023-05-17 14:44:28
  * @LastEditors: Wanko
- * @LastEditTime: 2023-05-19 10:40:10
+ * @LastEditTime: 2024-01-15 16:41:53
  * @Description: 
  */
 
-import Request  from "./src/core/Request"
-import defaultConfig from './src/default'
-import mergeConfig from "./src/core/mergeConfig"
+import Request  from "./lib/core/Request"
+import defaultConfig from './lib/default'
+import mergeConfig from "./lib/core/mergeConfig"
 // 创建实例
 function createInstance(defaultConfig) {
   const request = new Request(defaultConfig)

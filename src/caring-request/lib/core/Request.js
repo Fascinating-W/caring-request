@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-05-17 14:55:12
  * @LastEditors: Wanko
- * @LastEditTime: 2024-01-12 23:32:55
+ * @LastEditTime: 2024-02-05 20:26:10
  * @Description:
  */
 import { isPlainObject } from '../helpers/util'
@@ -70,7 +70,7 @@ export default class Request {
     return this._handleParams('post', ...args)
   }
   put(...args) {
-    return this._handleParams('post', ...args)
+    return this._handleParams('put', ...args)
   }
   _handleParams(method, ...args) {
     // 空参数退出

@@ -2,10 +2,11 @@
  * @Author: Wanko
  * @Date: 2023-05-18 15:22:51
  * @LastEditors: Wanko
- * @LastEditTime: 2024-01-12 23:37:45
+ * @LastEditTime: 2024-01-15 17:22:27
  * @Description:
  */
-import request from '../caring-request'
+// import request from '../caring-request'
+import request from 'caring-request'
 import { INTERFACE, PATH } from './namespace'
 import store from '../store'
 
