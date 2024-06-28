@@ -21,7 +21,10 @@ specifiers:
   '@rollup/plugin-node-resolve': ^15.0.2
   '@rollup/plugin-terser': ^0.4.3
   autoprefixer: ^10.4.2
+  caring-css: ^0.3.0
   caring-request: ^1.0.2
+  caring-route: ^1.0.2
+  caring-uni: ^1.0.1
   rollup: ^4.9.5
   sass: ^1.49.9
   vite: ^2.8.6
@@ -42,7 +45,10 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': 3.0.0-alpha-3031320220314002_vue@3.2.31
   '@dcloudio/uni-mp-weixin': 3.0.0-alpha-3031320220314002_vue@3.2.31
   '@dcloudio/uni-quickapp-webview': 3.0.0-alpha-3031320220314002_vue@3.2.31
+  caring-css: 0.3.0
   caring-request: 1.0.2
+  caring-route: 1.0.2
+  caring-uni: 1.0.1
   vue: 3.2.31
   vue-i18n: 9.1.9_vue@3.2.31
   vuex: 4.0.2_vue@3.2.31
@@ -2607,8 +2613,31 @@ packages:
   /caniuse-lite/1.0.30001320:
     resolution: {integrity: sha512-MWPzG54AGdo3nWx7zHZTefseM5Y1ccM7hlQKHRqJkPozUaw3hNbBTMmLn16GG2FUzjR13Cr3NPfhIieX5PzXDA==}
 
+  /caring-css/0.3.0:
+    resolution: {integrity: sha512-+Zua+3sGPyRufBnrE1E105reLgwp/xxwkbEdmFQkan8PBS6JJN+369Ao8LKdlmYhCWUiKVZ84YM7nR4J2WABKA==}
+    dev: false
+
   /caring-request/1.0.2:
     resolution: {integrity: sha512-ZVZrBXpattq6JUj8gh6RfEClPwTx5oGcDnHGkRMYh3lF+EoLRPSZmpUkw0U8Z/950ufZb7a8kchmXPQEWsWQIg==}
+    dev: false
+
+  /caring-route/1.0.2:
+    resolution: {integrity: sha512-XlN8wAjJPj0B7Q6syYckX5QkG4wjJp4LtAGJk+z4cbE76TKqqP3SIxK4BFWF7nRNJ4kJ+XEVa8FKVbU1NhismA==}
+    dependencies:
+      caring-test: 0.1.1
+      caring-utils: 0.0.1
+    dev: false
+
+  /caring-test/0.1.1:
+    resolution: {integrity: sha512-9wiOnzvNzuECUbrpWPRurZMFlrk8mDV6JhGv+s4T5PvwwAMZmMJNxfmSPbqR99UdpeWSo2UEdr+j3Kdx6E5bUQ==}
+    dev: false
+
+  /caring-uni/1.0.1:
+    resolution: {integrity: sha512-cRfqNvRwu3jvAboOLyqc8ORV6yxuuHHEjp4wsT/kVX/ZDPuHEx/EpAfpJ2GzeK6X8AgSbxRCO1Xz7wWwe98GoA==}
+    dev: false
+
+  /caring-utils/0.0.1:
+    resolution: {integrity: sha512-2BxAlNv8M3qnND9JYlHVW1y4sgfvRP+gf9zqjDez6CinnnOqKWgbX24+Wa4WBv7KXGQPaN8od1x5MYP3ei/D8Q==}
     dev: false
 
   /chalk/2.4.2:

@@ -2,14 +2,13 @@
  * @Author: Wanko
  * @Date: 2023-05-17 14:55:12
  * @LastEditors: Wanko
- * @LastEditTime: 2024-02-05 20:26:10
+ * @LastEditTime: 2024-03-25 11:17:00
  * @Description:
  */
 import { isPlainObject } from '../helpers/util'
 import mergeConfig from './mergeConfig'
 import dispatchRequest from './dispatchRequest'
 import InterceptorManager from './InterceptorManager'
-
 export default class Request {
   constructor(initConfig) {
     this.defaults = initConfig

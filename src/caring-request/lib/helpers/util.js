@@ -1,3 +1,10 @@
+/*
+ * @Author: Wanko
+ * @Date: 2023-05-17 17:08:34
+ * @LastEditors: Wanko
+ * @LastEditTime: 2024-03-25 11:16:53
+ * @Description: 
+ */
 export function isPlainObject(val) {
   return toString.call(val) === '[object Object]'
 }
@@ -9,7 +16,6 @@ export function isPlainObject(val) {
  */
 export function deepMerge(...objs) {
   const result = Object.create(null)
-
   objs.forEach((obj) => {
     if (obj) {
       Object.keys(obj).forEach((key) => {

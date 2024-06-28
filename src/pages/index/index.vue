@@ -2,18 +2,33 @@
  * @Author: Wanko
  * @Date: 2023-05-17 14:42:53
  * @LastEditors: Wanko
- * @LastEditTime: 2024-01-12 23:37:08
+ * @LastEditTime: 2024-06-15 19:48:08
  * @Description: 
 -->
 <template>
   <div>
-    <button @click="getDept">get dept</button>
+    <!-- <button @click="getUsers">获取用户列表</button> -->
+    <!-- <button @click="getUser">获取单个用户</button> -->
+    <div class="m p bg-white rounded justify-between flex-center" v-for="i in users">
+      <div>{{ i.name }}</div>
+      <div @click="onDelete(i)">
+        删除
+      </div>
+    </div>
+     <div class="mt">
+      <button type="warn" @click="onLogout">退出登录</button>
+    </div>
   </div>
 </template>
 
 <script>
-import request from '../../caring-request'
+import uniApp from 'caring-uni'
 export default {
+  data() {
+    return {
+      users: null
+    }
+  },
   async mounted() {
     // request.delete('http://jsonplaceholder.typicode.com/todos/1', {
     //   name: '22222',
@@ -38,7 +53,6 @@ export default {
     // request.interceptors.response.use(response => {
     //   console.log(response, 'response')
     //   response.message = '请求成功'
-      
     //   return response
     // })
     // request(
@@ -68,7 +82,6 @@ export default {
     //   },
     //   token: true
     // })
-
     // const instance = request.create({
     //   baseURL: 'https://some-domain.com/api/',
     //   timeout: 1000,
@@ -89,23 +102,39 @@ export default {
     //   console.log(err)
     // })
   },
+  async onShow() {
+    const users = await this.$request('users')
+    this.users = users
+    console.log(uniApp)
+  },
   methods: {
-    async getDept() {
-      console.log('getDept')
+    onLogout(){
+      this.$store.dispatch('logout')
+    },
+    async onDelete({_id}) {
+      await this.$api.delUser(_id)
+      uniApp.toast('删除成功')
+      this.getUsers()
+    },
+    async getUser() {
+      const user = await this.$request(`users/6618a435ed8180b570414a18`)
+      console.log(user)
+    },
+    async getUsers() {
+      const users = await this.$api.getUsers()
+      console.log(users)
+      this.users = users
       // const res = await request.get('https://huaiyi.chinacaring.com:28081/api/test/public/dept')
-      const res = await this.$request.get('DEPT', '', {raw: true})
+      // const res = await this.$request.get('users', '', {raw: true})
       // await this.$request.get(`DEPT`,'', {
       //   raw: true
       // })
       // await this.$request('DEPT', 'abc/123423423423')
-
       // await this.$request({
       //   url: 'DEPT',
       // })
-      console.log(res)
-      
     }
-  },
+  }
 }
 </script>
 

@@ -5,7 +5,13 @@
 			"style": {
 				"navigationBarTitleText": "uni-vite-vue3"
 			}
-		}
+		},
+		{
+      "path": "pages/index/login",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    }
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

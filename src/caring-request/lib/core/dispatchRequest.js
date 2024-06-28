@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-05-17 18:09:58
  * @LastEditors: Wanko
- * @LastEditTime: 2024-01-12 23:32:25
+ * @LastEditTime: 2024-03-19 00:01:52
  * @Description:
  */
 import { transformURL } from '../helpers/url'
@@ -36,7 +36,7 @@ export default function dispatchRequest(config) {
       } else {
         // 处理错误
         console.warn('服务端状态码不为200')
-        let { statusCode, errMsg } = response
+        let { statusCode, errMsg, data } = response
         switch (statusCode) {
           case 400:
             errMsg = '请求错误'
@@ -76,6 +76,7 @@ export default function dispatchRequest(config) {
         }
         uni.showModal({
           title: errMsg,
+          content: data,
           showCancel: false
         })
         reject(response)

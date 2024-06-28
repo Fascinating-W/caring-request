@@ -2,7 +2,7 @@
  * @Author: Wanko
  * @Date: 2023-05-17 14:42:53
  * @LastEditors: Wanko
- * @LastEditTime: 2023-07-07 16:53:00
+ * @LastEditTime: 2024-06-15 15:03:56
  * @Description: 
  */
 import {
@@ -10,7 +10,7 @@ import {
 } from "vue";
 import App from "./App.vue";
 import store from "./store";
-
+import 'caring-css'
 import request from "./request";
 export function createApp() {
 	const app = createSSRApp(App);
